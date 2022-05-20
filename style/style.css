@@ -1,1 +1,651 @@
+@import url("normalize.min.css");
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
+
+html, body {
+    font-family: "Roboto", sans-serif;
+    margin: 0px auto;
+    padding: 0px;
+    /*height: 100%;*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+}
+
+/* Подложка всей страницы */
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    box-sizing: border-box; /*Свойства width и height включают в себя значения padding и border, но не margin.*/
+}  
+
+.header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 72px;
+    top: 0px;
+    box-shadow: 0px 0px 16px 0px rgba(38, 38, 38, 0.16); /* Тень для хеадера. смещение X смещение Y размытие растяжение*/
+    background-color: white;
+}
+
+.header_container {
+    max-width: 956px;
+    padding: 0px;
+    margin: 0px auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_nav {
+    min-width: 134px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sign_in {
+    width: 78px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid #E0E0E0;
+    border-radius: 2px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 24px;
+    cursor: pointer; /* Вид курсора при наведении на кнопку*/
+    transition-duration: 0.4s;
+}
+
+.sign_in:hover {
+    background-color: #E0E0E0;
+}
+
+.sign_in:active {
+    background-color: rgb(86, 174, 84);
+}
+
+.basket {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .header_nav {
+        padding-right: 16px;
+        justify-content: flex-end;    
+    }
+    .basket {
+        display: none;    
+    }
+}
+
+.main_container {
+    max-width: 956px;
+    padding: 0px;
+    margin: 0px auto;
+    height: 100%;
+}
+
+@media screen and (max-width: 1012px) {
+    .main_container {
+        padding: 0px 8px;    
+    }
+}
+
+.margin {
+    margin-top: 72px; 
+}
+
+.search {
+    padding-top: 56px;
+    padding-bottom: 56px;
+}
+
+.input {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #757575;
+}
+
+input::-webkit-input-placeholder {
+    color: #626262;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px; 
+    background: white;
+  }
+
+  input:-moz-placeholder {
+    color: #626262;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px; 
+    background: white;
+  }
+
+  input:-ms-input-placeholder {
+    color: #626262;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px; 
+    background: white;
+  }
+
+h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 34px;
+}
+
+/*.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}*/
+
+.restaurant {
+    /*padding: 0px;*/
+    margin: 16px 0px 0px 0px;
+    overflow: hidden;
+}
+
+.restaurant:hover {
+    background-color: #efefef;
+}
+
+a {
+    text-decoration: none;
+}
+
+.restaurant-list {
+    height: 110px;
+}
+
+.restaurant-img {
+    width: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+.restaurant-img:hover {
+    transform: scale(1.06);
+}
+
+.restaurant-name {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1D1D1D;
+    padding-top: 12px;
+}
+
+.restaurant-kitchen {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #626262;
+    display: block;
+    margin-top: 4px;
+}
+
+.restaurant-delivery-time {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    color: #1D1D1D;
+    display: block;
+    margin-top: 4px;
+}
+
+footer {
+    background-color: #262626;
+    margin-top: 80px;
+    min-height: 552px;
+}
+
+.footer_container {
+    max-width: 956px;
+    padding: 0px;
+    margin: 0px auto;
+    height: 100%;
+}
+
+@media screen and (max-width: 980px) {
+    .footer_container {
+        padding: 0px 8px;    
+    }
+}
+
+.footer_logo {
+    border-bottom: 1px solid #979797;
+    padding: 56px 0px 40px 0px;
+}
+
+.footer_lang_selector_container {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-bottom: 24px;
+    margin-left: -16px;
+  }
+
+.footer_lang_selector {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    padding: 10px 70px 10px 50px;
+    background: url(../img/common/Shape.png) 93% / 8% no-repeat;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #3B3B3B;
+    color: white;
+    border: none;
+    width: 180px;
+}
+
+.footer_text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: #FFFFFF;
+}
+
+.padding_lang {
+    padding: 20px 0px 17px 0px;
+}
+
+.footer_link_text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.footer_nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.padding {
+    padding: 11.5px 0px;
+}
+
+@media screen and (max-width: 576px) {
+    .personal_data {
+        padding: 24px 0px 24px 8px;    
+    }
+}
+
+.app {
+    border-bottom: 1px solid #979797;
+    padding: 40px 0px;
+}
+
+.centr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.img-appstore {
+    width: 121px;
+    height: 40px;
+    padding-right: 20px;
+}
+
+.img-googleplay {
+    width: 135px;
+    height: 40px;
+    padding-left: 20px;
+}
+
+@media screen and (max-width: 576px) {
+    .img-appstore {
+        width: 109px;
+        height: 36px;
+        padding-right: 12px;   
+    }
+    .img-googleplay {
+        width: 124px;
+        height: 36px;
+        padding-left: 12px;   
+    }
+}
+
+@media screen and (max-width: 290px) {
+    .img-appstore {
+        padding-right: 0px;   
+    }
+    .img-googleplay {
+        padding-left: 0px;   
+    }
+}
+
+.privacy_policy {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: #FFFFFF;
+    padding: 40px 0px;
+}
+
+.scrollup {
+    position: fixed; /* фиксированная позиция */
+    color: #fff; /* цвет текста */
+    background-color: #59BD5A; /* цвет заднего фона */
+    right: 16px; /* расстояние от правого края */
+    bottom: 24px; /* расстояние от нижнего края */
+    padding: 28px 33px; /* отступы до содержимого блока */
+    opacity: 0.6;
+    /*font-size: 20px; /* размер шрифта (иконки) */
+    border-radius: 4px; /* скругление углов */
+    cursor: pointer; /* форма курсора */
+    display: none; /* не отображать элемент */
+    text-align: center; /*выравнивание содержимого элемента по центру */
+}
+
+.scrollup:hover {
+    opacity: 1;
+}
+
+.title-img {
+    background-image: url(../img/pushkin/photo-md.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 80px 0px;
+}
+
+@media screen and (max-width: 767px) {
+    .title-img {
+        background-image: url(../img/pushkin/photo-sm.png);   
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .title-img {
+        background-image: url(../img/pushkin/photo-xs.png);   
+    }
+}
+
+@media screen and (max-width: 335px) {
+    .title-img {
+        padding: 24px 0px;
+    }
+}
+
+.row-padding {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.card-rest {
+    /*padding-top: 102px;*/
+    /*padding-bottom: 102px;*/
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 38px;
+    box-shadow: 0 0 8px #9e9e9ee5;
+}
+
+@media screen and (max-width: 335px) {
+    .card-rest {
+        position: relative;
+        top: 51px;
+    }
+}
+
+h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    color: #1D1D1D;
+    text-align: center;
+}
+
+@media screen and (max-width: 335px) {
+    h1 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+.card-rest-flex-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 54px;
+}
+
+@media screen and (max-width: 335px) {
+    .card-rest-flex-footer {
+        flex-flow: column;
+    }
+    .card-rest-time {
+        margin-top: 16px;
+    }
+    .card-rest-flex-footer {
+        margin-top: 40px;
+    }
+}
+
+.card-rest-price {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #626262;
+}
+
+.card-rest-time {
+    padding: 8px 16px;
+    background-color: #262626;
+    border-radius: 16px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: #FFFFFF;
+}
+
+.card-rest-menu {
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 40px;
+    row-gap: 15px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    padding-top: 32px;
+    padding-bottom: 29px;
+}
+
+@media screen and (max-width: 630px) {
+    .card-rest-menu {
+        justify-content: center;
+    }
+}
+
+.card-rest-menu a:hover {
+    color: #327430;
+    cursor: pointer;
+}
+
+.line {
+    background-color: #757575;
+    opacity: 0.2;
+    height: 2px
+}
+
+@media screen and (max-width: 336px) {
+    .hide {
+        display: none;
+    }
+}
+
+.show {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 56px;
+    margin-bottom: 32px;
+}
+
+.show h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 34px;
+    color: #1D1D1D;
+    text-align: center;
+}
+
+.show div {
+    width: 50px;
+    height: 1px;
+    background-color: #757575;
+}
+
+@media screen and (min-width: 337px) {
+    .show div {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 336px) {
+    .show {
+        margin-top: 112px;
+        margin-bottom: 12px;
+        align-items: center;
+    }
+}
+    
+.card-menu {
+    height: 160px;
+    border: 1px solid rgba(117, 117, 117, 0.2);
+    border-radius: 3px;
+    margin-bottom: 49px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.card-menu:hover {
+    background-color: #efefef;;
+}
+
+.card-menu-text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.card-menu-text-name {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1D1D1D;
+    padding: 16px 16px 0px 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-menu-text-subname {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    color: #626262;
+    overflow: hidden;
+    text-overflow:clip;
+    padding: 4px 16px 0px 16px;
+}
+
+.card-menu-text-price {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21px;
+    color: #1D1D1D;
+    padding: 0px 0px 16px 16px;
+}
+
+.card-menu img {
+    height: 101%;
+    margin-top: -1px;
+}
+
+@media screen and (max-width: 767px) {
+    .card-menu {
+        margin-bottom: 32px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .card-menu, .card-menu-test {
+        height: 102px;
+        border: none;
+        border-bottom: 1px solid rgba(117, 117, 117, 0.2);
+        margin-bottom: 16px;
+    }
+    .card-menu-text-name {
+        font-size: 14px;
+    }
+    .card-menu-text-price {
+        padding-top: 16px;
+    }
+}
